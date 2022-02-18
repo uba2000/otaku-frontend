@@ -2,7 +2,7 @@
 	<footer>
 		<b-container>
 			<b-row>
-				<b-col cols="12" md="4">
+				<b-col cols="12" md="6">
 					<div class="" style="margin-bottom: 30px">
 						<h5>Quick Links</h5>
 					</div>
@@ -15,7 +15,7 @@
 						</ul>
 					</div>
 				</b-col>
-				<b-col cols="12" md="4">
+				<b-col cols="12" md="6">
 					<div class="" style="margin-bottom: 30px">
 						<h5 class="text-uppercase">Follow Us</h5>
 					</div>
