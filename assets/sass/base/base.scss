@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bodyGradient);
+  color: var(--textBlack);
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.landing-clear-padding {
+  padding-top: 100px;
+}
+
+.txt {
+  &-section-heading {
+    font-family: "PT Serif", serif;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 37px;
+    text-align: center;
+    &--sub {
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 26px;
+      text-align: center;
+      color: #4d4d4d;
+    }
+  }
+  &-sub-section-heading {
+    font-family: "PT Serif";
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 50px;
+  }
+}
+
+.bg-contrast {
+  background-color: var(--textBlack);
+  color: var(--white);
+  &.cream {
+    background-color: var(--creamColor);
+  }
+  &:not(.cream) {
+    .txt {
+      &-section-heading {
+        &--sub {
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+.base-sub-section {
+  padding-top: 85px;
+  padding-bottom: 85px;
+  background-color: var(--white);
+  &.cream {
+    background-color: var(--creamColor);
+  }
+  &.dark {
+    background-color: var(--textBlack);
+    &,
+    p {
+      color: var(--white);
+    }
+  }
+}
+
+.base-section {
+  padding: 138px 0 0px;
+}
+
+.txt {
+  &-primary {
+    color: var(--primaryColor);
+  }
+}
+
+.stats {
+  .main-text {
+    font-weight: bold;
+    text-align: center;
+    font-size: 51px;
+    line-height: 68px;
+  }
+  .sub-text {
+    font-weight: normal;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    color: #4d4d4d;
+  }
+}
+
+.slider-main-view {
+  padding: 125px 85px;
+  border-radius: 8px;
+  background-color: #fef4f1;
+
+  .avatar-view {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin-bottom: 16px;
+  }
+
+  .avatar-name {
+    margin-bottom: 14px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  .avatar-desc {
+    font-family: "Poppins";
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.slider-controller {
+  position: absolute;
+  display: flex;
+  right: 123px;
+  bottom: 85px;
+  z-index: 30;
+  div {
+    cursor: pointer;
+  }
+}
