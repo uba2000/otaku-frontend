@@ -2,7 +2,7 @@
 	<footer>
 		<b-container>
 			<b-row>
-				<b-col cols="12" md="6">
+				<b-col cols="12" md="6" class="mb-4 mb-md-0">
 					<div class="" style="margin-bottom: 30px">
 						<h5>Quick Links</h5>
 					</div>
@@ -22,19 +22,19 @@
 					<div>
 						<ul class="d-flex" style="font-size: 14px">
 							<li class="pr-2">
-								<a href="#">
+								<a href="#" class="d-flex">
 									<span class="mr-3"> <fa :icon="['fab', 'instagram']" /> </span
 									>IG
 								</a>
 							</li>
 							<li class="pr-2">
-								<a href="#">
+								<a href="#" class="d-flex">
 									<span class="mr-3"> <fa :icon="['fab', 'instagram']" /> </span
 									>TW
 								</a>
 							</li>
 							<li class="pr-2">
-								<a href="#">
+								<a href="#" class="d-flex">
 									<span class="mr-3"> <fa :icon="['fab', 'instagram']" /> </span
 									>WH
 								</a>
