@@ -23,19 +23,31 @@
 						<ul class="d-flex" style="font-size: 14px">
 							<li class="pr-2">
 								<a href="#" class="d-flex">
-									<span class="mr-3"> <fa :icon="['fab', 'instagram']" style="width:12.33px;height:13.99px;" /> </span
+									<span class="mr-3">
+										<fa
+											:icon="['fab', 'instagram']"
+											style="width: 12.33px; height: 13.99px"
+										/> </span
 									>IG
 								</a>
 							</li>
 							<li class="pr-2">
 								<a href="#" class="d-flex">
-									<span class="mr-3"> <fa :icon="['fab', 'instagram']" style="width:12.33px;height:13.99px;" /> </span
+									<span class="mr-3">
+										<fa
+											:icon="['fab', 'instagram']"
+											style="width: 12.33px; height: 13.99px"
+										/> </span
 									>TW
 								</a>
 							</li>
 							<li class="pr-2">
 								<a href="#" class="d-flex">
-									<span class="mr-3"> <fa :icon="['fab', 'instagram']" style="width:12.33px;height:13.99px;" /> </span
+									<span class="mr-3">
+										<fa
+											:icon="['fab', 'instagram']"
+											style="width: 12.33px; height: 13.99px"
+										/> </span
 									>WH
 								</a>
 							</li>
@@ -47,11 +59,22 @@
 				<span>2021 All right Reserved (C) OtakuTV</span>
 			</div>
 		</b-container>
+		<to-top class="totop" @click="scrollToTop" />
 	</footer>
 </template>
 
 <script>
-export default {};
+import ToTop from "~/assets/svg/to-top.svg?inline";
+export default {
+	components: { ToTop },
+	methods: {
+		scrollToTop() {
+			if (process.browser) {
+				window.scrollTo(0, 0);
+			}
+		},
+	},
+};
 </script>
 
 <style lang="scss" scoped>
@@ -60,5 +83,12 @@ footer {
 	padding: 144px 0 84px;
 	color: #ffffff;
 	font-family: "Poppins";
+	position: relative;
+	.totop {
+		position: absolute;
+		top: 99px;
+		right: 8%;
+		cursor: pointer;
+	}
 }
 </style>

@@ -9,6 +9,14 @@
 							:src="require(`~/assets/images/decorations/d${imgNumber}.png`)"
 							alt=""
 							class="position-relative"
+							v-if="imgNumber !== 4"
+						/>
+						<img
+							:src="require(`~/assets/images/decorations/d${imgNumber}.png`)"
+							alt=""
+							style="max-width: unset"
+							class="position-relative"
+							v-else
 						/>
 					</div>
 				</b-col>

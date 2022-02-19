@@ -3,7 +3,7 @@
 		<div class="main-section landing-clear-padding position-relative">
 			<base-logo-icon />
 			<div class="video-container">
-				<video autoplay ref="videoBg" loop muted>
+				<video ref="videoBg" muted on>
 					<source src="~/assets/film/Untitled (4).mp4" type="video/mp4" />
 					<source src="~/assets/film/Untitled (3).mp4" type="video/mp4" />
 					<source src="~/assets/film/Untitled (2).mp4" type="video/mp4" />
@@ -11,7 +11,7 @@
 				</video>
 			</div>
 			<div class="overlay"></div>
-			<base-play-icon @click="playVideo" />
+			<base-play-icon @clickedPlay="playVideo" v-if="showPlayButton" />
 		</div>
 		<div class="carousel-selection position-relative">
 			<div class="otaku-gallery-slider forward-slide" @click="flickityNext">
@@ -23,9 +23,9 @@
 			<div class="">
 				<vue-flickity :options="flickityOptions" ref="flickity">
 					<div
-						v-for="i in [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]"
+						v-for="(i, index) in [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]"
 						class="c-item"
-						:key="i"
+						:key="index"
 					>
 						<img :src="require(`~/assets/images/slides/slider${i}.png`)" />
 					</div>
@@ -51,6 +51,7 @@ export default {
 	},
 	data() {
 		return {
+			showPlayButton: true,
 			flickityOptions: {
 				// cellAlign: "center",
 				resize: true,
@@ -74,8 +75,16 @@ export default {
 			this.$refs.flickity.previous();
 		},
 		playVideo() {
-			// console.log(this.$refs.video);
-			// this.$refs.videoBg.play();
+			console.log(this.$refs.videoBg);
+			this.showPlayButton = false;
+			let vide0BG = this.$refs.videoBg;
+			vide0BG.play();
+			vide0BG.onended = () => {
+				this.stopVideo();
+			};
+		},
+		stopVideo() {
+			this.showPlayButton = true;
 		},
 	},
 	mounted() {

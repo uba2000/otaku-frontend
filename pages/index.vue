@@ -153,10 +153,10 @@
 							</div>
 							<div class="slider-controller">
 								<div class="mr-2">
-									<img src="~/assets/svg/chevLeft.svg" />
+									<chev-left class="chev-inactive" />
 								</div>
 								<div class="ml-2">
-									<img src="~/assets/svg/chevRight.svg" />
+									<chev-right />
 								</div>
 							</div>
 						</b-col>
@@ -172,10 +172,24 @@ import BaseLanding from "~/components/Base/BaseLanding.vue";
 import BaseSection from "~/components/Base/BaseSection.vue";
 import BaseSubSection from "~/components/Base/BaseSubSection.vue";
 import WhoAre from "~/components/sections/WhoAre.vue";
+import ChevLeft from "~/assets/svg/chevLeft.svg?inline";
+import ChevRight from "~/assets/svg/chevRight.svg?inline";
 export default {
-	components: { BaseSection, BaseSubSection, BaseLanding, WhoAre },
+	components: {
+		BaseSection,
+		BaseSubSection,
+		BaseLanding,
+		WhoAre,
+		ChevLeft,
+		ChevRight,
+	},
 };
 </script>
 
 <style lang="scss" scoped>
+.chev-inactive {
+	path {
+		fill: #fbcdca;
+	}
+}
 </style>

@@ -1,5 +1,8 @@
 <template>
-	<div class="position-relative player-container">
+	<div
+		class="position-relative player-container pop-in-animation"
+		@click="clickHandler"
+	>
 		<div class="play-container position-relative"></div>
 		<div class="player-inner-container position-absolute"></div>
 		<play class="position-absolute play" />
@@ -10,6 +13,11 @@
 import Play from "~/assets/svg/play.svg?inline";
 export default {
 	components: { Play },
+	methods: {
+		clickHandler() {
+			this.$emit("clickedPlay");
+		},
+	},
 };
 </script>
 

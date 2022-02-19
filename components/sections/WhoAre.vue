@@ -4,7 +4,7 @@
 			<div class="" style="margin-bottom: 64px">
 				<h3
 					style="font-size: 51px; line-height: 68px"
-					class="text-center text-white"
+					class="text-center text-white font-pt"
 				>
 					Who we are
 				</h3>
