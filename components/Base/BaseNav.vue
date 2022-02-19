@@ -8,7 +8,7 @@
 					/></a>
 				</div>
 
-				<div class="otaku-nav-menu">
+				<div class="otaku-nav-menu d-md-flex d-none">
 					<ul class="navbar-nav">
 						<li>
 							<a href="">Merch</a>

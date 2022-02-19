@@ -68,15 +68,15 @@
 				<header class="base-section-header" style="padding-bottom: 90px">
 					<b-container>
 						<b-row>
-							<b-col cols="12" md="4" class="stats">
+							<b-col cols="12" md="4" class="stats pb-3 pb-md-0">
 								<div class="main-text txt-primary">12k</div>
 								<div class="sub-text">Otakus</div>
 							</b-col>
-							<b-col cols="12" md="4" class="stats">
+							<b-col cols="12" md="4" class="stats pb-3 pb-md-0">
 								<div class="main-text txt-primary">90</div>
 								<div class="sub-text">Merch Variants</div>
 							</b-col>
-							<b-col cols="12" md="4" class="stats">
+							<b-col cols="12" md="4" class="stats pb-3 pb-md-0">
 								<div class="main-text txt-primary">200+</div>
 								<div class="sub-text">Anime for downloads</div>
 							</b-col>
@@ -85,7 +85,11 @@
 				</header>
 				<b-container class="mr-0 pr-0">
 					<b-row no-gutters class="mx-0">
-						<b-col cols="12" md="5" class="d-flex align-items-center pr-md-3">
+						<b-col
+							cols="12"
+							md="5"
+							class="d-flex align-items-center pr-md-3 mb-4 mb-md-0"
+						>
 							<div class="flex align-items-center">
 								<h3 class="txt-sub-section-heading" style="margin-bottom: 12px">
 									Feedbacks from members

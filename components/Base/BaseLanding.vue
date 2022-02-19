@@ -49,7 +49,7 @@ export default {
 		return {
 			flickityOptions: {
 				// cellAlign: "center",
-				// resize: true,
+				resize: true,
 				// contain: true,
 				wrapAround: true,
 				// groupCells: true,

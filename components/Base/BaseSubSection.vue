@@ -2,7 +2,7 @@
 	<div class="base-sub-section">
 		<b-container>
 			<b-row>
-				<b-col cols="12" md="5" :order-md="oppDir ? 2 : 1">
+				<b-col cols="12" md="5" :order-md="oppDir ? 2 : 1" class="my-4 my-md-0">
 					<div class="img-content">
 						<rect-decor class="position-absolute rect-decor" />
 						<img
@@ -12,9 +12,9 @@
 						/>
 					</div>
 				</b-col>
-				<b-col cols="12" md="7" :order-md="oppDir ? 1 : 2">
+				<b-col cols="12" md="7" :order-md="oppDir ? 1 : 2" class="my-4 my-md-0">
 					<div class="main-content h-100">
-						<div :style="contentPadding">
+						<div class="main-content-inner" :style="contentPadding">
 							<header class="mb-3">
 								<h3 class="txt-sub-section-heading">
 									<slot name="title"></slot>
@@ -80,6 +80,7 @@ export default {
 
 .img-content {
 	position: relative;
+	overflow: hidden;
 	.rect-decor {
 		z-index: 2;
 	}
@@ -96,6 +97,14 @@ export default {
 		margin-bottom: 0px;
 		line-height: 22px;
 		color: var(--textBlack-2);
+	}
+}
+
+.main-content-inner {
+	@media screen and (max-width: 767px) {
+		& {
+			padding: 0 !important;
+		}
 	}
 }
 </style>
