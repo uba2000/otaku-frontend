@@ -50,11 +50,11 @@ export default {
 <style lang="scss" scoped>
 #otaku-nav {
 	padding: 18px 0 20px;
-	position: fixed;
+	position: absolute;
 	width: 100%;
 	top: 0;
 	left: 0;
-	z-index: 100;
+	z-index: 999999;
 	.otaku-nav-menu {
 		display: flex;
 		align-items: center;
@@ -76,13 +76,18 @@ export default {
 			}
 		}
 	}
-	&.header-scroll {
-		background-color: #ffffff;
-		box-shadow: 0px 2px 24px -3px rgba(0, 0, 0, 0.1);
-		transition: background-color 0.4s ease;
-		ul.navbar-nav {
-			a {
-				color: #000000;
+	@media screen and (min-width: 767px) {
+		& {
+			position: fixed;
+			&.header-scroll {
+				background-color: #ffffff;
+				box-shadow: 0px 2px 24px -3px rgba(0, 0, 0, 0.1);
+				transition: background-color 0.4s ease;
+				ul.navbar-nav {
+					a {
+						color: #000000;
+					}
+				}
 			}
 		}
 	}
