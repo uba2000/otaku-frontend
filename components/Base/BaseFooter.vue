@@ -23,19 +23,19 @@
 						<ul class="d-flex" style="font-size: 14px">
 							<li class="pr-2">
 								<a href="#" class="d-flex">
-									<span class="mr-3"> <fa :icon="['fab', 'instagram']" /> </span
+									<span class="mr-3"> <fa :icon="['fab', 'instagram']" style="width:12.33px;height:13.99px;" /> </span
 									>IG
 								</a>
 							</li>
 							<li class="pr-2">
 								<a href="#" class="d-flex">
-									<span class="mr-3"> <fa :icon="['fab', 'instagram']" /> </span
+									<span class="mr-3"> <fa :icon="['fab', 'instagram']" style="width:12.33px;height:13.99px;" /> </span
 									>TW
 								</a>
 							</li>
 							<li class="pr-2">
 								<a href="#" class="d-flex">
-									<span class="mr-3"> <fa :icon="['fab', 'instagram']" /> </span
+									<span class="mr-3"> <fa :icon="['fab', 'instagram']" style="width:12.33px;height:13.99px;" /> </span
 									>WH
 								</a>
 							</li>
