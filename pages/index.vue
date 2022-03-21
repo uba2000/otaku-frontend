@@ -139,7 +139,7 @@
 							</div>
 							<div class="slider-controller">
 								<div class="mr-2" @click="flickityPrev">
-									<chev-left class="chev-inactive" />
+									<chev-left />
 								</div>
 								<div class="ml-2" @click="flickityNext">
 									<chev-right />

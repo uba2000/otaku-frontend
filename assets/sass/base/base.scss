@@ -157,6 +157,11 @@ a:hover {
     font-size: 16px;
     line-height: 22px;
   }
+
+  @include customBreakpoint(768px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 .slider-controller {
