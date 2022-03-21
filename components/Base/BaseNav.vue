@@ -55,6 +55,7 @@ export default {
 	top: 0;
 	left: 0;
 	z-index: 999999;
+	background-color: rgba(0, 0, 0, 0.5);
 	.otaku-nav-menu {
 		display: flex;
 		align-items: center;
