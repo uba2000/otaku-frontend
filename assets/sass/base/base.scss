@@ -185,3 +185,9 @@ a:hover {
     transform: scale(1);
   }
 }
+
+.flickity-viewport,
+.flickity-viewport-container {
+  max-height: 607px;
+  height: calc(100vh - 191px);
+}

@@ -62,7 +62,7 @@ export default {
 				// initialIndex: 11,
 				prevNextButtons: false,
 				autoPlay: true,
-				// imagesLoaded: true
+				// imagesLoaded: true,
 				// percentagePosition: false,
 				// adaptiveHeight: true,
 			},
@@ -102,7 +102,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "~/assets/sass/abstract/mixins";
 .landing-section {
 	.main-section {
@@ -169,10 +169,5 @@ export default {
 	height: 100%;
 	background: rgba(0, 0, 0, 0.54);
 	mix-blend-mode: overlay;
-}
-.flickity-viewport,
-.flickity-viewport-container {
-	max-height: 607px;
-	height: calc(100vh - 191px);
 }
 </style>

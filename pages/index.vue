@@ -102,60 +102,46 @@
 								</div>
 							</div>
 						</b-col>
-						<b-col cols="12" md="7" class="position-relative">
+						<b-col cols="12" md="7">
 							<div class="position-relative" style="min-height: 491px">
-								<div
-									class="slider-main-view ml-3 position-relative"
-									style="z-index: 20"
-								>
-									<div class="position-relative">
-										<div class="avatar-view-container">
-											<img
-												src="~/assets/images/slides/slide1.png"
-												alt=""
-												class="avatar-view"
-											/>
-										</div>
-										<div class="avatar-name">Amarachi</div>
-										<div class="avatar-desc">
-											From our contents to our services they love what we do and
-											here’s what they have to say about OTAKU TV
-										</div>
-										<div class="d-flex">
-											<div class="mr-2">
-												<fa :icon="['fab', 'instagram']" />
+								<vue-flickity :options="flickityOptions" ref="flickity">
+									<template v-for="(i, index) in [1, 2, 3, 4]">
+										<div
+											class="slider-main-view ml-3 position-relative"
+											style="z-index: 20"
+											:key="index"
+										>
+											<div class="position-relative">
+												<div class="avatar-view-container">
+													<img
+														src="~/assets/images/slides/slide1.png"
+														alt=""
+														class="avatar-view"
+													/>
+												</div>
+												<div class="avatar-name">Amarachi</div>
+												<div class="avatar-desc">
+													From our contents to our services they love what we do
+													and here’s what they have to say about OTAKU TV.
+												</div>
+												<div class="d-flex">
+													<div class="mr-2">
+														<fa :icon="['fab', 'instagram']" />
+													</div>
+													<div class="">
+														<fa :icon="['fab', 'twitter']" />
+													</div>
+												</div>
 											</div>
-											<div class="">
-												<fa :icon="['fab', 'twitter']" />
-											</div>
 										</div>
-									</div>
-								</div>
-								<div
-									class="slider-main-view position-absolute"
-									style="z-index: 10; background-color: #fbd4d3; top: 24px"
-								>
-									<div class="position-relative">
-										<div class="avatar-view-container">
-											<img
-												src="~/assets/images/slides/slide1.png"
-												alt=""
-												class="avatar-view"
-											/>
-										</div>
-										<div class="avatar-name">Amarachi</div>
-										<div class="avatar-desc">
-											From our contents to our services they love what we do and
-											here’s what they have to say about OTAKU TV
-										</div>
-									</div>
-								</div>
+									</template>
+								</vue-flickity>
 							</div>
 							<div class="slider-controller">
-								<div class="mr-2">
+								<div class="mr-2" @click="flickityPrev">
 									<chev-left class="chev-inactive" />
 								</div>
-								<div class="ml-2">
+								<div class="ml-2" @click="flickityNext">
 									<chev-right />
 								</div>
 							</div>
@@ -168,6 +154,7 @@
 </template>
 
 <script>
+import VueFlickity from "vue-flickity";
 import BaseLanding from "~/components/Base/BaseLanding.vue";
 import BaseSection from "~/components/Base/BaseSection.vue";
 import BaseSubSection from "~/components/Base/BaseSubSection.vue";
@@ -180,8 +167,35 @@ export default {
 		BaseSubSection,
 		BaseLanding,
 		WhoAre,
+		VueFlickity,
 		ChevLeft,
 		ChevRight,
+	},
+	data() {
+		return {
+			flickityOptions: {
+				// cellAlign: "center",
+				resize: true,
+				// contain: true,
+				wrapAround: true,
+				// groupCells: true,
+				pageDots: false,
+				// initialIndex: 11,
+				prevNextButtons: false,
+				autoPlay: true,
+				// imagesLoaded: true
+				// percentagePosition: false,
+				// adaptiveHeight: true,
+			},
+		};
+	},
+	methods: {
+		flickityNext() {
+			this.$refs.flickity.next();
+		},
+		flickityPrev() {
+			this.$refs.flickity.previous();
+		},
 	},
 };
 </script>
