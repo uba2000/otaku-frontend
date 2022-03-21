@@ -1,6 +1,6 @@
 <template>
 	<section class="landing-section">
-		<div class="main-section landing-clear-padding position-relative">
+		<div class="main-section landing-clear-padding position-relative d-none">
 			<base-logo-icon />
 			<div class="video-container">
 				<video ref="videoBg" muted on>
@@ -13,14 +13,14 @@
 			<div class="overlay"></div>
 			<base-play-icon @clickedPlay="playVideo" v-if="showPlayButton" />
 		</div>
-		<div class="carousel-selection position-relative">
+		<div class="carousel-selection position-relative main-section d-block">
 			<div class="otaku-gallery-slider forward-slide" @click="flickityNext">
 				<forward-arr />
 			</div>
 			<div class="otaku-gallery-slider backward-slide" @click="flickityPrev">
 				<backward-arr />
 			</div>
-			<div class="">
+			<div class="flickity-viewport-container">
 				<vue-flickity :options="flickityOptions" ref="flickity">
 					<div
 						v-for="(i, index) in [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]"
@@ -61,8 +61,9 @@ export default {
 				pageDots: false,
 				// initialIndex: 11,
 				prevNextButtons: false,
-				// autoPlay: false,
-				// imagesLoaded: true,
+				autoPlay: true,
+				// imagesLoaded: true
+				// percentagePosition: false,
 				// adaptiveHeight: true,
 			},
 		};
@@ -101,7 +102,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "~/assets/sass/abstract/mixins";
 .landing-section {
 	.main-section {
@@ -112,14 +113,16 @@ export default {
 		@include flex-center;
 	}
 	.carousel-selection {
-		height: 191px;
+		/* height: 191px; */
 		.c-item {
-			width: 274px;
-			height: 191px;
+			/* width: 274px;
+			height: 191px; */
 		}
 	}
 	.c-item {
 		background-color: #c4c4c4;
+		max-height: 607px;
+		height: calc(100vh - 191px);
 		img {
 			object-fit: cover;
 			width: 100%;
@@ -138,10 +141,10 @@ export default {
 		z-index: 99999;
 		@include flex-center;
 		&.forward-slide {
-			right: 50px;
+			right: 15px;
 		}
 		&.backward-slide {
-			left: 50px;
+			left: 15px;
 		}
 	}
 }
@@ -166,5 +169,10 @@ export default {
 	height: 100%;
 	background: rgba(0, 0, 0, 0.54);
 	mix-blend-mode: overlay;
+}
+.flickity-viewport,
+.flickity-viewport-container {
+	max-height: 607px;
+	height: calc(100vh - 191px);
 }
 </style>
