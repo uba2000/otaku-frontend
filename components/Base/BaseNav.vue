@@ -9,7 +9,7 @@
 				</div>
 
 				<div
-					class="d-md-none d-flex align-items-center"
+					class="d-md-none d-flex align-items-center text-white"
 					@click="$store.dispatch('layout/toggleMobileNav')"
 				>
 					<img src="~/assets/images/bars.svg" width="40" />
@@ -57,15 +57,15 @@ export default {
 <style lang="scss" scoped>
 #otaku-nav {
 	padding: 18px 0 20px;
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	min-height: 100px;
 	display: flex;
 	align-items: center;
-	top: 0;
+	top: 48px;
 	left: 0;
 	z-index: 999999;
-	background-color: #ffffff;
+	/* background-color: #ffffff; */
 	.otaku-nav-menu {
 		display: flex;
 		align-items: center;
@@ -90,14 +90,14 @@ export default {
 	@media screen and (min-width: 767px) {
 		& {
 			position: fixed;
-			background-color: rgba(0, 0, 0, 0.5);
+			/* background-color: rgba(0, 0, 0, 0.5); */
 			&.header-scroll {
-				background-color: #ffffff;
-				box-shadow: 0px 2px 24px -3px rgba(0, 0, 0, 0.1);
+				/* background-color: #ffffff; */
+				/* box-shadow: 0px 2px 24px -3px rgba(0, 0, 0, 0.1); */
 				transition: background-color 0.4s ease;
 				ul.navbar-nav {
 					a {
-						color: #000000;
+						/* color: #000000; */
 					}
 				}
 			}

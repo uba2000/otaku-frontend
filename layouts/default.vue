@@ -4,8 +4,8 @@
 			class="base-layout-main"
 			:class="{ 'open-mobile-nav': $store.getters['layout/getIsMobileNav'] }"
 		>
-			<base-nav />
 			<base-news-ticket />
+			<base-nav />
 			<main class="layout-main">
 				<Nuxt />
 			</main>
@@ -19,7 +19,8 @@
 		<base-mobile-nav
 			class="base-mobile-nav"
 			:class="{ 'open-mobile-nav': $store.getters['layout/getIsMobileNav'] }"
-		/>
+		>
+		</base-mobile-nav>
 	</div>
 </template>
 
@@ -32,7 +33,7 @@
 	.base-mobile-nav,
 	.base-layout-main,
 	.overlay {
-		transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease;
 	}
 
 	.base-mobile-nav,
@@ -42,7 +43,7 @@
 
 	.base-layout-main {
 		transform: translateX(0);
-		z-index: 99999999999;
+		z-index: 99999999;
 
 		&.open-mobile-nav {
 			@include customBreakpoint(768px) {
@@ -75,5 +76,15 @@
 	left: 0;
 	z-index: 9999999999999;
 	background-color: rgba(0, 0, 0, 0.44);
+
+	@include customBreakpointMin(768px) {
+		& {
+			display: none;
+		}
+	}
+}
+
+.layout-main {
+	z-index: 9999;
 }
 </style>

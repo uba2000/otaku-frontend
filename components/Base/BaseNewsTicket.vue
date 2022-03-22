@@ -21,15 +21,15 @@ export default {};
 <style lang="scss" scoped>
 @import "~/assets/sass/abstract/mixins";
 .news-ticket-container {
-	position: fixed;
-	top: 100px;
+	position: sticky;
+	top: 0px;
 	left: 0;
 	right: 0;
 	width: 100%;
 	border-top: 2px solid var(--primaryColor);
 	border-bottom: 2px solid var(--primaryColor);
 	display: flex;
-	z-index: 99999;
+	z-index: 9999999;
 	background-color: #ffffff;
 
 	@include customBreakpoint(767px) {

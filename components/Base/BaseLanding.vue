@@ -1,6 +1,6 @@
 <template>
 	<section class="landing-section">
-		<div class="main-section landing-clear-padding position-relative d-none">
+		<div class="main-section landing-clear-padding position-relative">
 			<base-logo-icon />
 			<div class="video-container">
 				<video ref="videoBg" muted on>
@@ -113,16 +113,14 @@ export default {
 		@include flex-center;
 	}
 	.carousel-selection {
-		/* height: 191px; */
+		height: 191px;
 		.c-item {
-			/* width: 274px;
-			height: 191px; */
+			width: 274px;
+			height: 191px;
 		}
 	}
 	.c-item {
 		background-color: #c4c4c4;
-		max-height: 607px;
-		height: calc(100vh - 191px);
 		img {
 			object-fit: cover;
 			width: 100%;
@@ -169,5 +167,6 @@ export default {
 	height: 100%;
 	background: rgba(0, 0, 0, 0.54);
 	mix-blend-mode: overlay;
+	z-index: 1;
 }
 </style>
