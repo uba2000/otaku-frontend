@@ -26,8 +26,7 @@ export default {};
 	left: 0;
 	right: 0;
 	width: 100%;
-	border-top: 1px solid var(--primaryColor);
-	border-bottom: 1px solid var(--primaryColor);
+	
 	display: flex;
 	z-index: 9999999;
 	background-color: #ffffff;
