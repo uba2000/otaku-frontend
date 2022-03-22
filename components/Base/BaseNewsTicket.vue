@@ -54,6 +54,7 @@ export default {};
 		.marquee-content {
 			display: block;
 			width: 10000%;
+			padding-left: 100%;
 			height: 30px;
 			position: absolute;
 			overflow: hidden;
