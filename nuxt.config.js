@@ -74,5 +74,8 @@ export default {
     name: '~/static/templates/otaku-loader.html',
     color: 'purple',
     background: 'black'
+  },
+  router: {
+    middleware: 'delay'
   }
 }
