@@ -8,6 +8,10 @@
 					/></a>
 				</div>
 
+				<div class="d-md-none d-flex align-items-center">
+					<img src="~/assets/images/bars.svg" width="40" />
+				</div>
+
 				<div class="otaku-nav-menu d-md-flex d-none">
 					<ul class="navbar-nav">
 						<li>
@@ -55,7 +59,7 @@ export default {
 	top: 0;
 	left: 0;
 	z-index: 999999;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: #ffffff;
 	.otaku-nav-menu {
 		display: flex;
 		align-items: center;
@@ -80,6 +84,7 @@ export default {
 	@media screen and (min-width: 767px) {
 		& {
 			position: fixed;
+			background-color: rgba(0, 0, 0, 0.5);
 			&.header-scroll {
 				background-color: #ffffff;
 				box-shadow: 0px 2px 24px -3px rgba(0, 0, 0, 0.1);

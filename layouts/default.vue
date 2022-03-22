@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<base-nav />
+		<base-news-ticket />
 		<main class="layout-main">
 			<Nuxt />
 		</main>

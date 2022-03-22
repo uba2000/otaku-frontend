@@ -62,7 +62,7 @@ export default {
 				// initialIndex: 11,
 				prevNextButtons: false,
 				autoPlay: true,
-				// imagesLoaded: true,
+				// imagesLoaded: true
 				// percentagePosition: false,
 				// adaptiveHeight: true,
 			},

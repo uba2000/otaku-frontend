@@ -107,7 +107,7 @@
 								<vue-flickity :options="flickityOptions" ref="flickity">
 									<template v-for="(i, index) in [1, 2, 3, 4]">
 										<div
-											class="slider-main-view ml-3 position-relative"
+											class="slider-main-view"
 											style="z-index: 20"
 											:key="index"
 										>
