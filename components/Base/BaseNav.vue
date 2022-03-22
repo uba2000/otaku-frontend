@@ -8,7 +8,10 @@
 					/></a>
 				</div>
 
-				<div class="d-md-none d-flex align-items-center">
+				<div
+					class="d-md-none d-flex align-items-center"
+					@click="$store.dispatch('layout/toggleMobileNav')"
+				>
 					<img src="~/assets/images/bars.svg" width="40" />
 				</div>
 
