@@ -24,6 +24,7 @@ export default {
 <style lang="scss" scoped>
 .player-container {
 	cursor: pointer;
+	z-index: 2;
 }
 .play-container {
 	width: 202px;
