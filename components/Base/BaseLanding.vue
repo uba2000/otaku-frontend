@@ -22,13 +22,13 @@
 			</div>
 			<div class="flickity-viewport-container">
 				<vue-flickity :options="flickityOptions" ref="flickity">
-					<div
+					<template
 						v-for="(i, index) in [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5]"
-						class="c-item"
-						:key="index"
 					>
-						<img :src="require(`~/assets/images/slides/slider${i}.png`)" />
-					</div>
+						<div class="c-item" :key="index">
+							<img :src="require(`~/assets/images/slides/slider${i}.png`)" />
+						</div>
+					</template>
 				</vue-flickity>
 			</div>
 		</div>
@@ -61,8 +61,8 @@ export default {
 				pageDots: false,
 				// initialIndex: 11,
 				prevNextButtons: false,
-				autoPlay: true,
-				// imagesLoaded: true
+				// autoPlay: true,
+				// imagesLoaded: true,
 				// percentagePosition: false,
 				// adaptiveHeight: true,
 			},
