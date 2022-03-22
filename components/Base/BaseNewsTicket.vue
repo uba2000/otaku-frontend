@@ -19,8 +19,9 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/sass/abstract/mixins";
 .news-ticket-container {
-	position: absolute;
+	position: fixed;
 	top: 100px;
 	left: 0;
 	right: 0;
@@ -29,6 +30,12 @@ export default {};
 	display: flex;
 	z-index: 99999;
 	background-color: #ffffff;
+
+	@include customBreakpoint(767px) {
+		& {
+			position: absolute;
+		}
+	}
 
 	.news-feed-breaking {
 		background-color: var(--primaryColor);
