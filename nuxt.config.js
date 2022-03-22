@@ -69,5 +69,10 @@ export default {
         'faInstagram'
       ]
     }
+  },
+  loadingIndicator: {
+    name: '~/static/templates/otaku-loader.html',
+    color: 'purple',
+    background: 'black'
   }
 }
