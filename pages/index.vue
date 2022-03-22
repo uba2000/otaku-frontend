@@ -83,7 +83,7 @@
 						</b-row>
 					</b-container>
 				</header>
-				<b-container class="mr-0 pr-0">
+				<b-container class="mr-0 pr-0" :style="returnContainerWidth">
 					<b-row no-gutters class="mx-0">
 						<b-col
 							cols="12"
@@ -148,6 +148,7 @@
 						</b-col>
 					</b-row>
 				</b-container>
+				<b-container ref="bodyContainer"></b-container>
 			</div>
 		</base-section>
 	</div>
@@ -187,15 +188,60 @@ export default {
 				// percentagePosition: false,
 				// adaptiveHeight: true,
 			},
+			newContainerWidth: null,
+			clear: "r",
 		};
 	},
+	mounted() {
+		this.resizeContainer();
+		if (process.browser) {
+			window.addEventListener("resize", this.resizeContainer);
+		}
+	},
 	methods: {
+		screenWidth() {
+			if (process.browser) {
+				if (document.body) {
+					return document.body.clientWidth;
+				}
+			}
+		},
+		resizeContainer() {
+			let containerWidth = this.$refs.bodyContainer.offsetWidth;
+			let marginSpace = this.screenWidth() - containerWidth;
+			let newWidth = marginSpace / 2;
+			this.newContainerWidth = containerWidth + newWidth;
+		},
 		flickityNext() {
 			this.$refs.flickity.next();
 		},
 		flickityPrev() {
 			this.$refs.flickity.previous();
 		},
+	},
+	computed: {
+		returnContainerWidth() {
+			let obj = null;
+			if (this.clear == "r") {
+				obj = {
+					"max-width": `${this.newContainerWidth}px`,
+				};
+				obj["margin-right"] = "0px";
+				obj["padding-right"] = "0px";
+			} else if (this.clear == "l") {
+				obj = {
+					"max-width": `${this.newContainerWidth}px`,
+				};
+				obj["margin-left"] = "0px";
+				obj["padding-left"] = "0px";
+			}
+			return obj;
+		},
+	},
+	destroyed() {
+		if (process.browser) {
+			window.removeEventListener("resize", this.resizeContainer);
+		}
 	},
 };
 </script>
